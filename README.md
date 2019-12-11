@@ -9,4 +9,4 @@ How to use:
 
 after following the prompts, the app will generate a user profile in html including user name, profile picture, github name, user bio, location, link to user website, number of public repos, number of followers, and number of people following.
 
-[Example Profile](./assets/ProfileExample.PNG)
+![Example Profile](./assets/ProfileExample.PNG)
