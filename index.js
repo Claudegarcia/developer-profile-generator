@@ -12,16 +12,16 @@ inquirer
             message: "Enter your GitHub username",
             name: "username"
         },
-        // {
-        //     type: "checkbox",
-        //     choices: ["green", "blue", "pink", "red"],
-        //     message: "What is your favorite color?",
-        //     name: "color"
-        // },
+        {
+            type: "checkbox",
+            choices: ["primary", "secondary", "success", "danger", "warning", "info", "light", "white"],
+            message: "pick a background color",
+            name: "color"
+        },
 
     ])
 
-    .then(function ({ username }) {
+    .then(function ({ username, color }) {
         const queryUrl = `https://api.github.com/users/${username}`;
         //const color = `${color}`
 
@@ -62,14 +62,14 @@ inquirer
                 <div class="container">
                     <div class="row my-5">
                         <div class="col-12">
-                            <div class="card text-center">
+                            <div class="card text-center bg-${color}">
                                 <img src="${avatar}" class="card-img-top mx-auto rounded-circle border border-primary" alt="Profile picture" style="width: 18rem;">
                                 <div class="card-body">
-                                    <p class="card-text" style="font-size: 40px;">${name}</p>
+                                    <p class="card-text" style="font-size: 50px;">${name}</p>
                                     <p class="card-text" style="font-size: 30px;">Github Username: ${username}</p>
-                                    <p class="card-text" style="font-size: 28px;">${bio}</p>
-                                    <p class="card-text" style="font-size: 28px;">${location}</p>
-                                    <a class="card-link" style="color: white;" href="${website}">My Portfolio</a>
+                                    <p class="card-text" style="font-size: 30px;">${bio}</p>
+                                    <p class="card-text" style="font-size: 20px;">${location}</p>
+                                    <a class="card-link" style="color: black; font-size: 30px" href="${website}">My Blog</a>
                                 </div>
                               </div>
                         </div>
@@ -77,14 +77,14 @@ inquirer
                     <div class="row mb-3">
                         <div class="col">
                             <div class="card text-center">
-                                <div class="card-body">
-                                    <h3 class="card-text" style="font-size: 35px;">${repos}</h3>
+                                <div class="card-body bg-${color}">
+                                <h3 class="card-text" style="font-size: 35px;">${following}</h3>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card text-center">
-                                <div class="card-body">
+                                <div class="card-body bg-${color}">
                                     <h3 class="card-text" style="font-size: 35px;">${followers}</h3>
                                 </div>
                             </div>
@@ -93,11 +93,12 @@ inquirer
                     <div class="row mb-3">
                         <div class="col">
                             <div class="card text-center">
-                                <div class="card-body">
-                                    <h3 class="card-text" style="font-size: 35px;">${following}</h3>
+                                <div class="card-body bg-${color}">
+                                    <h3 class="card-text" style="font-size: 35px;">${repos}</h3>
                                 </div>
                             </div>
                         </div>
+                       
                     </div>
                 </div>
                 </body>
