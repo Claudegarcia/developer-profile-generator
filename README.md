@@ -1,6 +1,6 @@
 # developer-profile-generator
 
-Deployed link:
+Deployed link: https://claudegarcia.github.io/developer-profile-generator/
 
 How to use:
 1. execute js file using "node index.js"
