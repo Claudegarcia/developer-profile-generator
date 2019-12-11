@@ -61,9 +61,9 @@ inquirer
             <body>
                 <div class="container">
                     <div class="row my-5">
-                        <div class="col-12">
+                        <div class="col">
                             <div class="card text-center bg-${color}">
-                                <img src="${avatar}" class="card-img-top mx-auto rounded-circle border border-primary" alt="Profile picture" style="width: 18rem;">
+                                <img src="${avatar}" class="rounded card-img-top mx-auto border border-primary" alt="Profile picture" style="width: 18rem;">
                                 <div class="card-body">
                                     <p class="card-text" style="font-size: 50px;">${name}</p>
                                     <p class="card-text" style="font-size: 30px;">Github Username: ${username}</p>
